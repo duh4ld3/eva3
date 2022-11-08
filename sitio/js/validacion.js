@@ -4,10 +4,10 @@ function validar() {
     var ret_tel =  validar_tel ();
     var ret_pass1 = validar_pass1();
     var ret_pass2 = validar_pass2();
-    //var ret_c = validar_c();
-    //&& ret_c
+    var ret_c = validar_c();
+   
 
-    return ret_email && ret_adr && ret_tel && ret_pass1 && ret_pass2 ;
+    return ret_email && ret_adr && ret_tel && ret_pass1 && ret_pass2  && ret_c;
 }
 
 
@@ -118,16 +118,16 @@ function validar_pass2 (){
     }
 }
 
-//function validar_c(){
-    //var input= document.getElementById("pass1");
-   // var div = document.getElementById("msj_pass1");
-    //var input= document.getElementById("pass2");
-    //var div = document.getElementById("msj_pass2");
-    //if (pass1.value != pass2.value){
-      //  div.innerText = 'las contraseñas no coinciden';
-        //div.className = 'm-2 text-danger';
-       // return false;
+function validar_c(){
+    var input= document.getElementById("pass1");
+   var div = document.getElementById("msj_pass1");
+    var input= document.getElementById("pass2");
+    var div = document.getElementById("msj_pass2");
+    if (pass1.value != pass2.value){
+        div.innerText = 'las contraseñas no coinciden';
+        div.className = 'm-2 text-danger';
+        return false;
 
-   // }
+    }
     
-//}
+}
